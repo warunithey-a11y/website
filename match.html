@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ක්‍රිකට් Live Match</title>
+</head>
+<body>
+  <h1>ක්‍රීඩාව සජීවී බලන්න</h1>
+  <div id="video-player"></div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const stream = urlParams.get('stream');
+
+    const playerDiv = document.getElementById('video-player');
+    playerDiv.innerHTML = `<iframe src="${stream}" width="800" height="450" allowfullscreen></iframe>`;
+  </script>
+</body>
+</html>
